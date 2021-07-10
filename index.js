@@ -6,6 +6,8 @@ bajorai.gime({ name: 'Augustas', year: 2000, married: false, sex: 'vyras' });
 bajorai.gime({ name: 'Barbora', year: 1998, married: false, sex: 'moteris' });
 bajorai.gime({ name: 'Saulius', year: 1996, married: false, sex: 'vyras' });
 bajorai.gime({ name: 'Banana', year: 1983, married: false, sex: 'moteris' });
+bajorai.gime({ name: 'Gokas', year: 2005, married: false, sex: 'vyras' });
+
 // console.log(bajorai);
 
 
@@ -37,6 +39,7 @@ bajorai.giminesMedis();
 // 1. Augustas gime 2000 metais ir yra vedes.
 
 bajorai.skyrybos(0);
+
 bajorai.vestuves(2);
 
 bajorai.giminesMedis();
