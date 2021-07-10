@@ -15,34 +15,14 @@ class Gimine {
         console.log('======================');
         let padetis = '';
         for (let i = 0; i < this.list.length; i++) {
-            const element = this.list[i];
-            // let padetis = element.married ? element.sex === 'vyras' ? 'vedes' : 'istekejus' : 'nevedes';
-            if (element.married === true && element.sex === 'vyras') {
-                padetis = 'vedes';
-            }
-            if (element.married === true && element.sex === 'moteris') {
-                padetis = 'istekejusi';
-            }
-            if (element.married === false && element.sex === 'vyras') {
-                padetis = 'nevedes';
-            }
-            if (element.married === false && element.sex === 'moteris') {
-                padetis = 'netekejusi';
-            }
-            //trumpinam logica:
-            // if (element.married === true && element.sex === 'vyras') {
-            //     padetis = 'vedes';
-            // } else {
-            //     padetis = 'nevedes';
-            // }
-            // if (element.married === true && element.sex === 'moteris') {
-            //     padetis = 'istekejusi';
-            // } else {
-            //     padetis = 'netekejusi';
-            // }
+            const zmogus = this.list[i];
 
-
-            console.log(`${i + 1}. ${element.name} gime ${element.year} ir ${padetis}.`);
+            if (zmogus.sex) {
+                padetis = (zmogus.married ? '' : 'ne') + 'vedes';
+            } else {
+                padetis = (zmogus.married ? '' : 'ne') + 'istekejusi';
+            }
+            console.log(`${i + 1}. ${zmogus.name} gime ${zmogus.year} ir ${padetis}.`);
         }
         console.log('======================');
     }
@@ -101,8 +81,7 @@ class Gimine {
             typeof item.year !== 'number' ||
             item.year <= 0 ||
             typeof item.married !== 'boolean' ||
-            typeof item.sex !== 'string' ||
-            item.sex === ''
+            typeof item.sex !== 'boolean'
         ) {
             return false;
         }

@@ -2,11 +2,11 @@ const Gimine = require('./Gimine.js');
 
 const bajorai = new Gimine();
 
-bajorai.gime({ name: 'Augustas', year: 2000, married: false, sex: 'vyras' });
-bajorai.gime({ name: 'Barbora', year: 1998, married: false, sex: 'moteris' });
-bajorai.gime({ name: 'Saulius', year: 1996, married: false, sex: 'vyras' });
-bajorai.gime({ name: 'Banana', year: 1983, married: false, sex: 'moteris' });
-bajorai.gime({ name: 'Gokas', year: 2005, married: false, sex: 'vyras' });
+bajorai.gime({ name: 'Augustas', year: 2000, married: false, sex: true });
+bajorai.gime({ name: 'Barbora', year: 1998, married: false, sex: false });
+bajorai.gime({ name: 'Saulius', year: 1996, married: false, sex: true });
+bajorai.gime({ name: 'Banana', year: 1983, married: false, sex: false });
+bajorai.gime({ name: 'Gokas', year: 2005, married: false, sex: true });
 
 // console.log(bajorai);
 
