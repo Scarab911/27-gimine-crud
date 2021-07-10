@@ -13,21 +13,22 @@ class Gimine {
     giminesMedis() {
         console.log('Bajorai gimines medis:');
         console.log('======================');
+        let padetis = '';
         for (let i = 0; i < this.list.length; i++) {
             const element = this.list[i];
-            let padetis = element.married ? element.sex === 'vyras' ? 'vedes' : 'istekejus' : 'nevedes';
-            // if (element.married === true && element.sex === 'vyras') {
-            //     padetis = 'vedes';
-            // }
-            // if (element.married === true && element.sex === 'moteris') {
-            //     padetis = 'istekejusi';
-            // }
-            // if (element.married === false && element.sex === 'vyras') {
-            //     padetis = 'nevedes';
-            // }
-            // if (element.married === false && element.sex === 'moteris') {
-            //     padetis = 'netekejusi';
-            // }
+            // let padetis = element.married ? element.sex === 'vyras' ? 'vedes' : 'istekejus' : 'nevedes';
+            if (element.married === true && element.sex === 'vyras') {
+                padetis = 'vedes';
+            }
+            if (element.married === true && element.sex === 'moteris') {
+                padetis = 'istekejusi';
+            }
+            if (element.married === false && element.sex === 'vyras') {
+                padetis = 'nevedes';
+            }
+            if (element.married === false && element.sex === 'moteris') {
+                padetis = 'netekejusi';
+            }
             //trumpinam logica:
             // if (element.married === true && element.sex === 'vyras') {
             //     padetis = 'vedes';
